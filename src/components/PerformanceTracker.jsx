@@ -58,7 +58,8 @@ const TOPICS = {
   coding: ['React', 'JavaScript', 'TypeScript', 'Node.js', 'CSS', 'HTML', 'Next.js', 'Redux', 'GraphQL'],
   dsa: ['Arrays', 'Strings', 'Linked Lists', 'Trees', 'Graphs', 'Dynamic Programming', 'Sorting', 'Searching'],
   job: ['Resume', 'Interview Prep', 'Networking', 'Portfolio', 'LinkedIn', 'GitHub'],
-  other: ['Learning', 'Research', 'Planning', 'Review']
+  other: ['Learning', 'Research', 'Planning', 'Review'],
+  projects: ['EasyGo', 'Practice']
 };
 
 const MotionCard = motion(Card);
@@ -294,6 +295,7 @@ const EntryDetailDialog = ({ open, onClose, entry, onSave, onDelete }) => {
                   <MenuItem value="dsa">DSA</MenuItem>
                   <MenuItem value="job">Job Search</MenuItem>
                   <MenuItem value="other">Other</MenuItem>
+                  <MenuItem value="projects">Projects</MenuItem>    
                 </Select>
               </FormControl>
             ) : (
@@ -575,6 +577,7 @@ const PerformanceTracker = () => {
       case 'coding': return <CodeIcon />;
       case 'dsa': return <PsychologyIcon />;
       case 'job': return <WorkIcon />;
+      case 'projects': return <CodeIcon />;
       default: return <SchoolIcon />;
     }
   };
@@ -742,6 +745,7 @@ const PerformanceTracker = () => {
                 <MenuItem value="dsa">DSA</MenuItem>
                 <MenuItem value="job">Job Search</MenuItem>
                 <MenuItem value="other">Other</MenuItem>
+                <MenuItem value="projects">Projects</MenuItem>
               </Select>
             </FormControl>
           </Grid>
